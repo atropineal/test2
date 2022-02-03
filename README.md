@@ -1,1 +1,1 @@
-"hello, world" | out-file -filepath c:\users\public\proof.txt
+("hello, world: " + get-date) | out-file -filepath c:\users\public\proof.txt
